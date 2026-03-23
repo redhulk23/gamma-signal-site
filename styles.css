@@ -1,0 +1,495 @@
+/* ============================================================
+   GAMMA SIGNAL — Marketing Site Styles
+   Dark theme | Space Grotesk + Manrope
+   ============================================================ */
+
+/* ---- Google Fonts ---- */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700;800&family=Manrope:wght@400;500;600;700&display=swap');
+
+/* ---- Design Tokens ---- */
+:root {
+  --bg-primary:    #0a0a14;
+  --bg-panel:      #0f1a0f;
+  --bg-tile:       #121e12;
+  --border:        #1a3a1a;
+  --purple:        #7c3aed;
+  --purple-light:  #a78bfa;
+  --green:         #00d26a;
+  --green-hover:   #00e676;
+  --green-glow:    rgba(0, 210, 106, 0.15);
+  --purple-glow:   rgba(124, 58, 237, 0.15);
+  --text:          #d1fae5;
+  --text-muted:    #6ee7b7;
+  --text-bright:   #ecfdf5;
+
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body:    'Manrope', sans-serif;
+  --radius:       16px;
+  --transition:   all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ---- Reset ---- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ---- Base ---- */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg-primary);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-panel); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
+
+/* ---- Background Orbs ---- */
+.bg-orb {
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(140px);
+  opacity: 0;
+  animation: orb-fade-in 2s ease 0.3s forwards;
+}
+
+@keyframes orb-fade-in {
+  to { opacity: 1; }
+}
+
+.orb-a {
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, var(--green-glow) 0%, transparent 70%);
+  top: -160px;
+  left: -160px;
+}
+
+.orb-b {
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, var(--purple-glow) 0%, transparent 70%);
+  bottom: 0;
+  right: -140px;
+}
+
+/* ---- Layout ---- */
+.container {
+  width: min(1080px, 92vw);
+  margin: 0 auto;
+}
+
+/* ---- Scroll Animations ---- */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.animate-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================================================
+   HERO SECTION
+   ============================================================ */
+.hero {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 24px;
+  text-align: center;
+}
+
+.hero-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+/* γ mark */
+.gamma-mark {
+  font-family: var(--font-display);
+  font-size: 64px;
+  font-weight: 700;
+  color: var(--purple);
+  line-height: 1;
+  margin-bottom: 24px;
+  user-select: none;
+}
+
+/* Hero name */
+.hero-name {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  color: var(--text-bright);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
+
+/* Tagline */
+.hero-tagline {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  color: var(--text-muted);
+  max-width: 44ch;
+  line-height: 1.65;
+  margin-bottom: 8px;
+}
+
+/* Supporting line */
+.hero-sub {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 15px;
+  color: var(--text-muted);
+  max-width: 48ch;
+  line-height: 1.65;
+  margin-bottom: 32px;
+}
+
+/* ---- Signup Form ---- */
+.signup-wrap {
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.signup-form {
+  width: 100%;
+}
+
+.signup-row {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+}
+
+.signup-input {
+  flex: 1;
+  background: var(--bg-tile);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 15px;
+  color: var(--text);
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.signup-input::placeholder {
+  color: rgba(110, 231, 183, 0.5);
+}
+
+.signup-input:focus {
+  border-color: var(--purple);
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.15);
+}
+
+.signup-btn {
+  flex-shrink: 0;
+  background: var(--green);
+  color: var(--bg-primary);
+  border: none;
+  border-radius: var(--radius);
+  padding: 14px 28px;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+  white-space: nowrap;
+}
+
+.signup-btn:hover {
+  background: var(--green-hover);
+}
+
+.signup-btn:active {
+  transform: scale(0.97);
+}
+
+.trust-line {
+  margin-top: 12px;
+  font-size: 12px;
+  color: rgba(110, 231, 183, 0.7);
+  text-align: center;
+}
+
+/* ============================================================
+   VALUE PROPOSITIONS
+   ============================================================ */
+.value-props {
+  position: relative;
+  z-index: 1;
+  padding: 80px 24px;
+}
+
+.eyebrow {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--green);
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.card {
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.card:hover {
+  border-color: rgba(124, 58, 237, 0.35);
+  transform: translateY(-2px);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.card-icon {
+  color: var(--purple);
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.card-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--text-bright);
+}
+
+.card-body {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
+/* ============================================================
+   SOCIAL PROOF
+   ============================================================ */
+.social-proof {
+  position: relative;
+  z-index: 1;
+  padding: 80px 24px;
+}
+
+.testimonial-card {
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.04), rgba(0, 210, 106, 0.06));
+  border: 1px solid rgba(124, 58, 237, 0.18);
+  border-radius: 20px;
+  padding: 36px 40px;
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.testimonial-quote {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+  font-style: italic;
+  color: var(--text);
+  max-width: 52ch;
+  margin: 0 auto 16px;
+  line-height: 1.6;
+  list-style: none;
+}
+
+.testimonial-attribution {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* ============================================================
+   SECOND CTA
+   ============================================================ */
+.second-cta {
+  position: relative;
+  z-index: 1;
+  padding: 80px 24px;
+}
+
+.cta-card {
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.04), rgba(0, 210, 106, 0.06));
+  border: 1px solid rgba(124, 58, 237, 0.18);
+  border-radius: 20px;
+  padding: 48px 40px;
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+}
+
+.cta-headline {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  color: var(--text-bright);
+  letter-spacing: -0.01em;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.site-footer {
+  position: relative;
+  z-index: 1;
+  border-top: 1px solid var(--border);
+  padding: 32px 24px;
+  text-align: center;
+}
+
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.footer-gamma {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--purple);
+  font-size: 16px;
+}
+
+.footer-name {
+  font-family: var(--font-display);
+  font-weight: 600;
+}
+
+.footer-sep {
+  opacity: 0.5;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-link {
+  font-size: 12px;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+  color: var(--text);
+}
+
+.footer-copy {
+  font-size: 11px;
+  color: rgba(110, 231, 183, 0.6);
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+/* Tablet and below */
+@media (max-width: 768px) {
+  .hero {
+    padding: 64px 16px;
+    min-height: auto;
+    padding-top: 120px;
+  }
+
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .value-props,
+  .social-proof,
+  .second-cta {
+    padding: 56px 16px;
+  }
+
+  .signup-row {
+    flex-direction: column;
+  }
+
+  .signup-btn {
+    width: 100%;
+  }
+
+  .testimonial-card,
+  .cta-card {
+    padding: 28px 24px;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .gamma-mark {
+    font-size: 48px;
+  }
+
+  .site-footer {
+    padding: 24px 16px;
+  }
+
+  .footer-brand {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

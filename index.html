@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gamma Signal — AI Strategy Intelligence</title>
+    <meta name="description" content="Weekly briefings on what's working in AI adoption. For operators who ship." />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Gamma Signal — AI Strategy Intelligence" />
+    <meta property="og:description" content="Weekly briefings on what's working in AI adoption. For operators who ship." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://gammasignal.ai" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Gamma Signal — AI Strategy Intelligence" />
+    <meta name="twitter:description" content="Weekly briefings on what's working in AI adoption. For operators who ship." />
+
+    <!-- Favicon: γ as SVG -->
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700;800&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <!-- Background ambient orbs -->
+    <div class="bg-orb orb-a" aria-hidden="true"></div>
+    <div class="bg-orb orb-b" aria-hidden="true"></div>
+
+    <main>
+
+      <!-- ================================================================
+           SECTION 1: HERO
+           ================================================================ -->
+      <section class="hero" id="hero">
+        <div class="hero-inner">
+
+          <div class="gamma-mark" aria-hidden="true">γ</div>
+
+          <h1 class="hero-name">Gamma Signal</h1>
+
+          <p class="hero-tagline">
+            AI strategy intelligence for operators<br />
+            who ship, not just strategise.
+          </p>
+
+          <p class="hero-sub">
+            Weekly briefings on what's working in AI<br />
+            adoption — from someone building it daily.
+          </p>
+
+          <!-- Beehiiv embed signup form -->
+          <div class="signup-wrap" id="hero-signup">
+            <form
+              class="signup-form"
+              action="https://app.beehiiv.com/subscribe"
+              method="POST"
+              target="_blank"
+              novalidate
+              onsubmit="return handleSignup(this, event)"
+            >
+              <input type="hidden" name="publication_id" value="BEEHIIV_PUBLICATION_ID" />
+              <input type="hidden" name="referring_source" value="gammasignal.ai" />
+              <div class="signup-row">
+                <input
+                  class="signup-input"
+                  type="email"
+                  name="email"
+                  placeholder="your@email.com"
+                  autocomplete="email"
+                  required
+                  aria-label="Email address"
+                />
+                <button class="signup-btn" type="submit">Subscribe</button>
+              </div>
+            </form>
+            <p class="trust-line">Free &middot; No spam &middot; Unsubscribe anytime</p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ================================================================
+           SECTION 2: VALUE PROPOSITIONS
+           ================================================================ -->
+      <section class="value-props" id="value-props">
+        <div class="container">
+
+          <p class="eyebrow">What You Get</p>
+
+          <div class="cards-grid">
+
+            <article class="card animate-on-scroll" data-delay="0">
+              <div class="card-header">
+                <span class="card-icon" aria-hidden="true">&#9670;</span>
+                <h3 class="card-title">Signal, Not Noise</h3>
+              </div>
+              <p class="card-body">
+                Curated AI developments that actually matter to your business — not every funding round and research paper.
+              </p>
+            </article>
+
+            <article class="card animate-on-scroll" data-delay="100">
+              <div class="card-header">
+                <span class="card-icon" aria-hidden="true">&#9670;</span>
+                <h3 class="card-title">Operator-First</h3>
+              </div>
+              <p class="card-body">
+                Written by someone building AI products daily, not writing about them from the sidelines.
+              </p>
+            </article>
+
+            <article class="card animate-on-scroll" data-delay="200">
+              <div class="card-header">
+                <span class="card-icon" aria-hidden="true">&#9670;</span>
+                <h3 class="card-title">Practical Execution</h3>
+              </div>
+              <p class="card-body">
+                What worked, what didn't, and what to consider for your own rollout. Field notes, not theory.
+              </p>
+            </article>
+
+            <article class="card animate-on-scroll" data-delay="300">
+              <div class="card-header">
+                <span class="card-icon" aria-hidden="true">&#9670;</span>
+                <h3 class="card-title">Weekly Cadence</h3>
+              </div>
+              <p class="card-body">
+                One email, once a week. Dense enough to be worth your time, brief enough to read in 5 minutes.
+              </p>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ================================================================
+           SECTION 3: SOCIAL PROOF
+           ================================================================ -->
+      <section class="social-proof" id="social-proof">
+        <div class="container">
+          <div class="testimonial-card animate-on-scroll" data-placeholder="true">
+            <blockquote class="testimonial-quote">
+              "Gamma Signal is the only AI newsletter I actually open every week."
+            </blockquote>
+            <p class="testimonial-attribution">— Name, Title, Company</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================================================================
+           SECTION 4: SECOND CTA
+           ================================================================ -->
+      <section class="second-cta" id="second-cta">
+        <div class="container">
+          <div class="cta-card animate-on-scroll">
+            <h2 class="cta-headline">Get the signal.</h2>
+
+            <div class="signup-wrap">
+              <form
+                class="signup-form"
+                action="https://app.beehiiv.com/subscribe"
+                method="POST"
+                target="_blank"
+                novalidate
+                onsubmit="return handleSignup(this, event)"
+              >
+                <input type="hidden" name="publication_id" value="BEEHIIV_PUBLICATION_ID" />
+                <input type="hidden" name="referring_source" value="gammasignal.ai-footer-cta" />
+                <div class="signup-row">
+                  <input
+                    class="signup-input"
+                    type="email"
+                    name="email"
+                    placeholder="your@email.com"
+                    autocomplete="email"
+                    required
+                    aria-label="Email address"
+                  />
+                  <button class="signup-btn" type="submit">Subscribe</button>
+                </div>
+              </form>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ================================================================
+         FOOTER
+         ================================================================ -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <span class="footer-gamma" aria-hidden="true">γ</span>
+          <span class="footer-name">Gamma Signal</span>
+          <span class="footer-sep">&middot;</span>
+          <a class="footer-link" href="https://genfusion.com" target="_blank" rel="noopener noreferrer">A GenFusion publication</a>
+        </div>
+        <div class="footer-links">
+          <a class="footer-link" href="/privacy">Privacy Policy</a>
+          <a class="footer-link" href="https://genfusion.com" target="_blank" rel="noopener noreferrer">GenFusion.com</a>
+        </div>
+        <p class="footer-copy">&copy; 2026 GenFusion. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      // ---- Scroll animations ----
+      (function () {
+        var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        if (prefersReducedMotion) {
+          document.querySelectorAll('.animate-on-scroll').forEach(function (el) {
+            el.classList.add('is-visible');
+          });
+          return;
+        }
+
+        var observer = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                var delay = entry.target.dataset.delay || 0;
+                setTimeout(function () {
+                  entry.target.classList.add('is-visible');
+                }, parseInt(delay));
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.12 }
+        );
+
+        document.querySelectorAll('.animate-on-scroll').forEach(function (el) {
+          observer.observe(el);
+        });
+      })();
+
+      // ---- Form submission handler ----
+      function handleSignup(form, e) {
+        var email = form.querySelector('input[type="email"]').value;
+        if (!email || !email.includes('@')) {
+          e.preventDefault();
+          return false;
+        }
+        // Allow native form POST to Beehiiv
+        return true;
+      }
+    </script>
+
+  </body>
+</html>
