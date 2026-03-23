@@ -4,20 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gamma Signal — AI Strategy Intelligence</title>
-    <meta name="description" content="Weekly briefings on what's working in AI adoption. For operators who ship." />
+    <meta name="description" content="Weekly briefings on what's working in AI adoption. For operators who ship, not just strategise." />
 
     <!-- Open Graph -->
     <meta property="og:title" content="Gamma Signal — AI Strategy Intelligence" />
-    <meta property="og:description" content="Weekly briefings on what's working in AI adoption. For operators who ship." />
+    <meta property="og:description" content="Weekly briefings on what's working in AI adoption. For operators who ship, not just strategise." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://gammasignal.ai" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Gamma Signal — AI Strategy Intelligence" />
-    <meta name="twitter:description" content="Weekly briefings on what's working in AI adoption. For operators who ship." />
+    <meta name="twitter:description" content="Weekly briefings on what's working in AI adoption. For operators who ship, not just strategise." />
 
-    <!-- Favicon: γ as SVG -->
+    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
 
     <!-- Fonts -->
@@ -32,9 +32,27 @@
   </head>
 
   <body>
+
     <!-- Background ambient orbs -->
     <div class="bg-orb orb-a" aria-hidden="true"></div>
     <div class="bg-orb orb-b" aria-hidden="true"></div>
+
+    <!-- ================================================================
+         HEADER
+         ================================================================ -->
+    <header class="site-header" id="site-header">
+      <div class="header-inner">
+        <a class="header-brand" href="/" aria-label="Gamma Signal home">
+          <span class="header-gamma" aria-hidden="true">γ</span>
+          <span class="header-name">Gamma Signal</span>
+        </a>
+        <nav class="header-nav" aria-label="Site navigation">
+          <a class="nav-link" href="#about">About</a>
+          <a class="nav-link" href="https://genfusion.com" target="_blank" rel="noopener noreferrer">GenFusion</a>
+        </nav>
+        <a class="header-cta" href="#hero-signup">Subscribe free</a>
+      </div>
+    </header>
 
     <main>
 
@@ -43,6 +61,11 @@
            ================================================================ -->
       <section class="hero" id="hero">
         <div class="hero-inner">
+
+          <div class="hero-eyebrow">
+            <span class="pulse-dot" aria-hidden="true"></span>
+            New issues every week
+          </div>
 
           <div class="gamma-mark" aria-hidden="true">γ</div>
 
@@ -54,11 +77,11 @@
           </p>
 
           <p class="hero-sub">
-            Weekly briefings on what's working in AI<br />
-            adoption — from someone building it daily.
+            Weekly briefings on what's working in AI adoption —<br />
+            from someone building it daily.
           </p>
 
-          <!-- Beehiiv embed signup form -->
+          <!-- Signup form -->
           <div class="signup-wrap" id="hero-signup">
             <form
               class="signup-form"
@@ -80,10 +103,10 @@
                   required
                   aria-label="Email address"
                 />
-                <button class="signup-btn" type="submit">Subscribe</button>
+                <button class="signup-btn" type="submit">Subscribe free</button>
               </div>
             </form>
-            <p class="trust-line">Free &middot; No spam &middot; Unsubscribe anytime</p>
+            <p class="trust-line">No spam &middot; Unsubscribe anytime &middot; Free forever</p>
           </div>
 
         </div>
@@ -95,47 +118,57 @@
       <section class="value-props" id="value-props">
         <div class="container">
 
-          <p class="eyebrow">What You Get</p>
+          <p class="section-eyebrow">What You Get</p>
 
           <div class="cards-grid">
 
             <article class="card animate-on-scroll" data-delay="0">
-              <div class="card-header">
-                <span class="card-icon" aria-hidden="true">&#9670;</span>
-                <h3 class="card-title">Signal, Not Noise</h3>
+              <div class="card-icon-wrap" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 1L11.09 6.26L17 7.27L13 11.14L14.18 17L9 14.27L3.82 17L5 11.14L1 7.27L6.91 6.26L9 1Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                </svg>
               </div>
+              <h3 class="card-title">Signal, Not Noise</h3>
               <p class="card-body">
                 Curated AI developments that actually matter to your business — not every funding round and research paper.
               </p>
             </article>
 
-            <article class="card animate-on-scroll" data-delay="100">
-              <div class="card-header">
-                <span class="card-icon" aria-hidden="true">&#9670;</span>
-                <h3 class="card-title">Operator-First</h3>
+            <article class="card animate-on-scroll" data-delay="80">
+              <div class="card-icon-wrap" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="9" cy="9" r="7.5" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M9 5.5v3.5l2.5 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
               </div>
+              <h3 class="card-title">Weekly Cadence</h3>
+              <p class="card-body">
+                One email, once a week. Dense enough to be worth your time, brief enough to read in 5 minutes.
+              </p>
+            </article>
+
+            <article class="card animate-on-scroll" data-delay="160">
+              <div class="card-icon-wrap" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 9h12M3 4.5h12M3 13.5h7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <h3 class="card-title">Operator-First</h3>
               <p class="card-body">
                 Written by someone building AI products daily, not writing about them from the sidelines.
               </p>
             </article>
 
-            <article class="card animate-on-scroll" data-delay="200">
-              <div class="card-header">
-                <span class="card-icon" aria-hidden="true">&#9670;</span>
-                <h3 class="card-title">Practical Execution</h3>
+            <article class="card animate-on-scroll" data-delay="240">
+              <div class="card-icon-wrap" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 14l4-8 4 4 3-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <circle cx="15" cy="5" r="1.5" fill="currentColor"/>
+                </svg>
               </div>
+              <h3 class="card-title">Practical Execution</h3>
               <p class="card-body">
                 What worked, what didn't, and what to consider for your own rollout. Field notes, not theory.
-              </p>
-            </article>
-
-            <article class="card animate-on-scroll" data-delay="300">
-              <div class="card-header">
-                <span class="card-icon" aria-hidden="true">&#9670;</span>
-                <h3 class="card-title">Weekly Cadence</h3>
-              </div>
-              <p class="card-body">
-                One email, once a week. Dense enough to be worth your time, brief enough to read in 5 minutes.
               </p>
             </article>
 
@@ -144,15 +177,22 @@
       </section>
 
       <!-- ================================================================
-           SECTION 3: SOCIAL PROOF
+           SECTION 3: ABOUT
            ================================================================ -->
-      <section class="social-proof" id="social-proof">
+      <section class="about" id="about">
         <div class="container">
-          <div class="testimonial-card animate-on-scroll" data-placeholder="true">
-            <blockquote class="testimonial-quote">
-              "Gamma Signal is the only AI newsletter I actually open every week."
-            </blockquote>
-            <p class="testimonial-attribution">— Name, Title, Company</p>
+          <div class="about-card animate-on-scroll">
+            <div class="about-accent" aria-hidden="true">γ</div>
+            <div class="about-content">
+              <p class="section-eyebrow">Who Writes This</p>
+              <h2 class="about-headline">Built by operators, for operators.</h2>
+              <p class="about-body">
+                Gamma Signal is a publication of <a class="about-link" href="https://genfusion.com" target="_blank" rel="noopener noreferrer">GenFusion</a>, an AI consulting firm that works with executives and product teams to implement AI that actually ships. Every issue is written from the field — what we're seeing in client engagements, what's landing, and what isn't.
+              </p>
+              <p class="about-body">
+                This is not a recap of headlines. It's a practitioner's view of what AI adoption really looks like when you're accountable for outcomes.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -164,6 +204,7 @@
         <div class="container">
           <div class="cta-card animate-on-scroll">
             <h2 class="cta-headline">Get the signal.</h2>
+            <p class="cta-sub">Join operators who want clarity on AI, not more noise.</p>
 
             <div class="signup-wrap">
               <form
@@ -186,9 +227,10 @@
                     required
                     aria-label="Email address"
                   />
-                  <button class="signup-btn" type="submit">Subscribe</button>
+                  <button class="signup-btn" type="submit">Subscribe free</button>
                 </div>
               </form>
+              <p class="trust-line">No spam &middot; Unsubscribe anytime &middot; Free forever</p>
             </div>
 
           </div>
@@ -212,16 +254,42 @@
           <a class="footer-link" href="/privacy">Privacy Policy</a>
           <a class="footer-link" href="https://genfusion.com" target="_blank" rel="noopener noreferrer">GenFusion.com</a>
         </div>
-        <p class="footer-copy">&copy; 2026 GenFusion. All rights reserved.</p>
+        <p class="footer-copy">&copy; 2026 GenFusion LLC. All rights reserved.</p>
       </div>
     </footer>
 
     <script>
+      // ---- Scroll-aware header ----
+      (function () {
+        var header = document.getElementById('site-header');
+        var lastY = 0;
+        var ticking = false;
+
+        function updateHeader() {
+          var y = window.scrollY;
+          if (y < 20) {
+            header.classList.remove('is-floating', 'is-hidden');
+          } else if (y > lastY && y > 80) {
+            header.classList.add('is-hidden');
+          } else {
+            header.classList.remove('is-hidden');
+            header.classList.add('is-floating');
+          }
+          lastY = y;
+          ticking = false;
+        }
+
+        window.addEventListener('scroll', function () {
+          if (!ticking) {
+            requestAnimationFrame(updateHeader);
+            ticking = true;
+          }
+        }, { passive: true });
+      })();
+
       // ---- Scroll animations ----
       (function () {
-        var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-        if (prefersReducedMotion) {
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
           document.querySelectorAll('.animate-on-scroll').forEach(function (el) {
             el.classList.add('is-visible');
           });
@@ -232,15 +300,15 @@
           function (entries) {
             entries.forEach(function (entry) {
               if (entry.isIntersecting) {
-                var delay = entry.target.dataset.delay || 0;
+                var delay = parseInt(entry.target.dataset.delay || 0);
                 setTimeout(function () {
                   entry.target.classList.add('is-visible');
-                }, parseInt(delay));
+                }, delay);
                 observer.unobserve(entry.target);
               }
             });
           },
-          { threshold: 0.12 }
+          { threshold: 0.1 }
         );
 
         document.querySelectorAll('.animate-on-scroll').forEach(function (el) {
@@ -248,14 +316,13 @@
         });
       })();
 
-      // ---- Form submission handler ----
+      // ---- Form handler ----
       function handleSignup(form, e) {
         var email = form.querySelector('input[type="email"]').value;
         if (!email || !email.includes('@')) {
           e.preventDefault();
           return false;
         }
-        // Allow native form POST to Beehiiv
         return true;
       }
     </script>
